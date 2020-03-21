@@ -1,12 +1,13 @@
 
 .container {
-    width: 50em;
+    width: 51em;
     margin: 5em auto auto;
     display: block;
 }
 
 div {
-    font-family: "Avenir", "Helvetica", "Futura", "SansSerif";
+    font-family: "Avenir", "Helvetica", "Futura", sans-serif;
+    font-size: 0.96em;
     margin-bottom: 0.5em;
     display: inline-block;
 }
@@ -26,6 +27,7 @@ div {
 .info {
     font-weight: 100;
     float: right;
+    width: 40em;
 }
 
 .headerLineBreak {
