@@ -1,0 +1,20 @@
+div {
+    font-family: "Avenir", "Helvetica", "Futura", "SansSerif";
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+/* remove formatting from lists */
+ul {
+    list-style: none none;
+    padding-left: 0;
+}
+
+.header {
+    font-weight: bolder;
+    float: left;
+}
+
+.data {
+    float: right;
+}
