@@ -1,18 +1,28 @@
 div {
     font-family: "Avenir", "Helvetica", "Futura", "SansSerif";
     background-color: aquamarine;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
+    display: inline-block;
 }
 
 /* remove formatting from lists */
 ul {
     list-style: none none;
-    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.row {
+    /* TBD */
 }
 
 .header {
     font-weight: bolder;
     float: left;
+    margin-right: 1em;
 }
 
 .data {
