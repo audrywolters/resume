@@ -1,8 +1,35 @@
+
+.container {
+    width: 50em;
+    margin: 5em auto auto;
+    display: block;
+}
+
 div {
     font-family: "Avenir", "Helvetica", "Futura", "SansSerif";
-    background-color: aquamarine;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     display: inline-block;
+}
+
+.header {
+    font-weight: 800;
+    float: left;
+    margin-right: 1em;
+    width: 10em;
+    text-align: right;
+}
+
+.dates {
+    font-weight: 500;
+}
+
+.info {
+    font-weight: 100;
+    float: right;
+}
+
+.headerLineBreak {
+    margin-bottom: 0;
 }
 
 /* remove formatting from lists */
@@ -13,18 +40,4 @@ ul {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 0;
-}
-
-.row {
-    /* TBD */
-}
-
-.header {
-    font-weight: bolder;
-    float: left;
-    margin-right: 1em;
-}
-
-.data {
-    float: right;
 }
