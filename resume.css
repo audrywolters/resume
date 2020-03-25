@@ -3,12 +3,13 @@
     width: 51em;
     margin: 5em auto auto;
     display: block;
+    color: #434243;
 }
 
 div {
     font-family: "Avenir", "Helvetica", "Futura", sans-serif;
     font-size: 0.96em;
-    margin-bottom: 0.5em;
+    margin-bottom : 0.5em;
     display: inline-block;
 }
 
