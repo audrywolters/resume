@@ -1,6 +1,6 @@
 
 .container {
-    width: 51em;
+    width: 50.3em;
     margin: 5em auto auto;
     display: block;
 }
@@ -13,8 +13,7 @@ div {
 
 .header {
     font-weight: 800;
-    float: left;
-    margin-right: 1em;
+    margin-right: 1.3em;
     width: 10em;
     text-align: right;
 }
@@ -29,10 +28,6 @@ div {
     width: 40em;
 }
 
-.headerLineBreak {
-    margin-bottom: 0;
-}
-
 /* remove formatting from lists */
 ul {
     list-style: none none;
@@ -41,4 +36,6 @@ ul {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 0;
+    /* this one is needed tho */
+    margin-bottom: 1.5em;
 }
