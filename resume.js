@@ -1,10 +1,6 @@
 
 const highlightSection = (mousedOver) => {
 
-    console.log(mousedOver)
-
-    // AUDRY check for null
-
     // run away if something strange has gone on
     if ((typeof (mousedOver === undefined) === true) || mousedOver == null) {
 
@@ -14,10 +10,7 @@ const highlightSection = (mousedOver) => {
 
     // we've got something that isn't wanted - don't do fancy highlighting
     if (mousedOver.className !== "section") {
-        // sections.forEach((section) => {
-        //     section.style.color = "black"
-        // })
-        console.log("not a section")
+        console.log("error: not a section")
         return
     }
 
