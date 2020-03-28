@@ -1,10 +1,17 @@
 
+let sections
+
+window.onload = function() {
+    let sectionsCollection = document.getElementsByClassName("section")
+    sections = Array.from(sectionsCollection)
+}
+
 const highlightSection = (mousedOver) => {
 
     // run away if something strange has gone on
     if ((typeof (mousedOver === undefined) === true) || mousedOver == null) {
-
         console.log("error: section is undefined or null")
+        makeAllBlack(mousedOver)
         return
     }
 
@@ -25,13 +32,23 @@ const highlightSection = (mousedOver) => {
     }
 
     // we've found the right stuff!
-    mousedOver.style.color = "#000000";
-    mousedOver.style.fontSize = "105%"
+    sections.forEach(function (section) {
+        if (section.id === mousedOver.id) {
+            mousedOver.style.color = "#000000"
+        } else {
+            section.style.color = "#7d7c7d"
+        }
+    })
+
+    // mousedOver.style.fontSize = "105%"
 
 }
 
 const makeAllBlack = (mousedOver) => {
-    mousedOver.style.color = "#434243"
-    mousedOver.style.fontSize = "100%"
+
+    sections.forEach(function(section) {
+        section.style.color = "#000000"
+    })
+    // mousedOver.style.fontSize = "100%"
 }
 
