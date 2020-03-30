@@ -1,4 +1,3 @@
-### Interactive Resume of Audry Wolters
 This is an interactive version of my resume.
 It is built with HTML, CSS, and Javascript.
 
