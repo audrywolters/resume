@@ -1,6 +1,7 @@
 
 let sections
 
+// get all the sections so we only have to do it once
 window.onload = function() {
     let sectionsCollection = document.getElementsByClassName("section")
     sections = Array.from(sectionsCollection)
@@ -9,7 +10,7 @@ window.onload = function() {
 const highlightSection = (mousedOver) => {
 
     // run away if something strange has gone on
-    if ((typeof (mousedOver === undefined) === true) || mousedOver == null) {
+    if ((typeof (mousedOver === undefined) === true) || mousedOver === null) {
         console.log("error: section is undefined or null")
         makeAllBlack(mousedOver)
         return
@@ -18,6 +19,7 @@ const highlightSection = (mousedOver) => {
     // we've got something that isn't wanted - don't do fancy highlighting
     if (mousedOver.className !== "section") {
         console.log("error: not a section")
+        makeAllBlack(mousedOver)
         return
     }
 
@@ -28,10 +30,12 @@ const highlightSection = (mousedOver) => {
     }
     if (Number.isNaN(mousedOverInt) || mousedOverInt < 1 || mousedOverInt > 30) {
         console.log("error: there's a section w/ bad id")
+        makeAllBlack(mousedOver)
         return
     }
 
     // we've found the right stuff!
+    // 'highlight' what the user wants to read
     sections.forEach(function (section) {
         if (section.id === mousedOver.id) {
             mousedOver.style.color = "#000000"
@@ -39,16 +43,13 @@ const highlightSection = (mousedOver) => {
             section.style.color = "#7d7c7d"
         }
     })
-
-    // mousedOver.style.fontSize = "105%"
-
 }
 
-const makeAllBlack = (mousedOver) => {
-
+// either the user is not hovering over a section
+// or there's been an error
+const makeAllBlack = () => {
     sections.forEach(function(section) {
         section.style.color = "#000000"
     })
-    // mousedOver.style.fontSize = "100%"
 }
 
