@@ -4,13 +4,22 @@ let sections
 // get all the sections so we only have to do it once
 window.onload = function() {
     let sectionsCollection = document.getElementsByClassName("section")
+    if (sectionsCollection === undefined || sectionsCollection === null) {
+        console.log("error: no sections were collected")
+        return
+    }
+
     sections = Array.from(sectionsCollection)
+    if (sections === undefined || sections === null || sections.length < 1) {
+        console.log("error: was unable to convert sections into an array")
+        return
+    }
 }
 
 const highlightSection = (mousedOver) => {
 
     // run away if something strange has gone on
-    if ((typeof (mousedOver === undefined) === true) || mousedOver === null) {
+    if (mousedOver === undefined || mousedOver === null) {
         console.log("error: section is undefined or null")
         makeAllBlack(mousedOver)
         return
@@ -52,4 +61,3 @@ const makeAllBlack = () => {
         section.style.color = "#000000"
     })
 }
-
