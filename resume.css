@@ -1,13 +1,13 @@
 
 .container {
-    width: 50.3em;
-    margin: 5em auto auto;
+    width: 45.4em;
+    margin: 3em auto auto;
     display: block;
 }
 
 div {
     font-family: "Avenir", "Helvetica", "Futura", sans-serif;
-    font-size: 0.96em;
+    font-size: 0.94em;
     display: inline-block;
 }
 
@@ -28,8 +28,8 @@ div {
     width: 40em;
 }
 
-/* remove formatting from lists */
 ul {
+    /* remove formatting from lists */
     list-style: none none;
     margin-block-start: 0;
     margin-block-end: 0;
